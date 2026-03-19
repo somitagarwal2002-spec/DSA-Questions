@@ -37,3 +37,19 @@ reveresing(length - 1)
 
 print(new_array)
 
+
+
+
+# Using Pointers
+l = 0
+r = len(array) - 1
+
+def reverseArr(left, right):
+    if left >= right:
+        return
+    array[left], array[right] = array[right], array[left]
+    return reverseArr(left+1, right-1)
+
+reverseArr(l, r)
+print(array)
+
